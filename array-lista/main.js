@@ -23,25 +23,28 @@ console.log(frigo);
 frigo.push('pesca');
 console.log(frigo);
 
+let trovato = false;
 
 
 btn.addEventListener('click', function () {
     let valueInput = frutto.value;
     console.log('Il valore inserito è:', valueInput);
-    let trovato = false;
+
     for (let i = 0; i < frigo.length; i++) {
         if (frigo[i].toLowerCase === valueInput.toLowerCase) {
             trovato = true;
         }
     }
     console.log(trovato);
-    if (trovato = true) {
-        result.innerHTML = "Trovato! Devo solo preparare il cocktail.";
-    } else {
-        result.innerHTML = "Oh no, devo uscire a comprare il cocomero!";
-    }
+
 
 })
+
+if (trovato) {
+    result.innerHTML = "Trovato! Devo solo preparare il cocktail.";
+} else {
+    result.innerHTML = "Oh no, devo uscire a comprare il cocomero!";
+}
 
 
 
